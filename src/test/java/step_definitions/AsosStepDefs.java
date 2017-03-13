@@ -7,8 +7,10 @@ import java.util.concurrent.TimeUnit;
 
 
 import cucumber.api.PendingException;
+import cucumber.api.java.cs.A;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -66,7 +68,7 @@ public class AsosStepDefs {
         // Write code here that turns the phrase above into concrete actions
 
         AsosHomePage.small_images.click();
-        TimeUnit.SECONDS.sleep(10);
+        TimeUnit.SECONDS.sleep(5);
 
     }
 
@@ -94,5 +96,32 @@ public class AsosStepDefs {
     public void iSelectAustraliaAsLocale() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         AsosHomePage.SelectCountry("Australia");
+    }
+
+    @Then("^I choose one tshirt?$")
+    public void i_choose_one_tshirt() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        AsosHomePage.tshirtlink.click();
+    }
+
+    @Then("^I save tshirt for later purchase?$")
+    public void i_save_tshirt_for_later_purchase() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        AsosHomePage.saveLaterBtn.click();
+    }
+
+    @Then("^I click on saved items link?$")
+    public void i_click_on_saved_items_link() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        AsosHomePage.savedItemsLink.click();
+        TimeUnit.SECONDS.sleep(5);
+
+    }
+
+    @Then("^I can see my saved tshirt$")
+    public void i_can_see_my_saved_tshirt() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        Boolean itemFound = driver.getPageSource().contains("ASOS PLUS T-Shirt In Purple With Roll Sleeve");
+        Assert.assertTrue("Items getting saved", itemFound);
     }
 }

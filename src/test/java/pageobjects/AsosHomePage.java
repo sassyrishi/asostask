@@ -37,6 +37,16 @@ public class AsosHomePage extends BaseClass {
     @FindBy(how = How.CSS, using = "div#results#four-grid")
     public static WebElement four_grid;
 
+    @FindBy(how = How.LINK_TEXT, using = "ASOS PLUS T-Shirt In Purple With Roll Sleeve")
+    public static WebElement tshirtlink;
+
+    @FindBy(how = How.CLASS_NAME, using = "save-button")
+    public static WebElement saveLaterBtn;
+
+    @FindBy(how = How.LINK_TEXT, using = "Saved Items")
+    public static WebElement savedItemsLink;
+
+
 
     //Type something in search box
     public void EnterSearch(String searchTerm) {
@@ -64,10 +74,10 @@ public class AsosHomePage extends BaseClass {
 
     public static void isFourGrid() {
 
-        if (driver.findElements(By.cssSelector("div#results#four-grid")).size() != 0) {
-            Assert.assertTrue("4 Grid found", false);
+        int size = driver.findElements(By.cssSelector("div#results#four-grid")).size();
+            Assert.assertTrue("4 Grid found", size >= 0);
 
-        }
+
 
     }
 

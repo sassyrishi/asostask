@@ -1,11 +1,21 @@
 ASOS assignment
 =====================
 
-Assumptions:
-Maven is already installed and configured.
+## Requirements
 
-Execution:
-once this repository is cloned, use command "mvn clean" and then "mvn test" to execute the cucumber tests
+- Java 8
+- Maven 3.3 - installed and configured
+- Git tool installed.
+
+
+## Usage
+
+Clone this repo to your local folder. 
+
+### Clean Build Outputs
+
+`mvn clean` will remove the `target` directory and all the compiled resources and reports.
+'mvn test' will execute all the tests and store the reports in 'target' folder
 
 Results:
-Results can be found in target directory. 
+Results can be found in target directory, '\cucumber-html-report\index.html'. 
