@@ -19,4 +19,4 @@ Clone this repo to your local folder.
 `mvn test` will execute all the tests and store the reports in 'target' folder
 
 ## Results:
-Results can be found in target directory, '\cucumber-html-report\index.html'. 
+Results can be found in target directory, `\cucumber-html-report\index.html`. 
