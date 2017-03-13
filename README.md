@@ -1,4 +1,11 @@
 ASOS assignment
 =====================
 
-This is a template project that you can use to start with cucumber-jvm and selenium java tests. Read about it on [seleniumframework.com] (http://www.seleniumframework.com/cucumber-jvm-2/what-is-cucumber-jvm/)
+Assumptions:
+Maven is already installed and configured.
+
+Execution:
+once this repository is cloned, use command "mvn clean" and then "mvn test" to execute the cucumber tests
+
+Results:
+Results can be found in target directory. 
